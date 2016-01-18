@@ -9,7 +9,7 @@
 			<li><?php echo $this->Html->link(__('新規投稿者作成'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-	<h2><?php echo __('Comments'); ?></h2>
+	<h2><?php echo __('コメント一覧'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>

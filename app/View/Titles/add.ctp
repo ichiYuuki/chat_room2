@@ -3,14 +3,14 @@
 		<h3><?php echo __('Actions'); ?></h3>
 		<ul style="display:inline-flex">
 
-			<li><?php echo $this->Html->link(__('List Titles'), array('action' => 'index')); ?></li>
-			<li><?php echo $this->Html->link(__('List Comments'), array('controller' => 'comments', 'action' => 'index')); ?> </li>
-			<li><?php echo $this->Html->link(__('New Comment'), array('controller' => 'comments', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('タイトル一覧'), array('action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('コメント一覧'), array('controller' => 'comments', 'action' => 'index')); ?> </li>
+			<li><?php echo $this->Html->link(__('新規コメント作成'), array('controller' => 'comments', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 <?php echo $this->Form->create('Title'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Title'); ?></legend>
+		<legend><?php echo __('タイトル作成'); ?></legend>
 	<?php
 		echo $this->Form->input('titel_name');
 	?>

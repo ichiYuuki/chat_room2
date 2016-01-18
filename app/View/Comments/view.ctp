@@ -13,7 +13,7 @@
 		</ul>
 	</div>
 
-	<h2><?php echo __('コメント'); ?></h2>
+	<h2><?php echo __('コメント詳細'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
@@ -25,7 +25,7 @@
 			<?php echo h($comment['Comment']['modified']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('作成日時'); ?></dt>
+		<dt><?php echo __('投稿日時'); ?></dt>
 		<dd>
 			<?php echo h($comment['Comment']['created']); ?>
 			&nbsp;

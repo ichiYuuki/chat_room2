@@ -2,12 +2,12 @@
 	<div class="actions">
 		<h3><?php echo __('Actions'); ?></h3>
 		<ul style="display:inline-flex">
-			<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
-			<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-			<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
-			<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
-			<li><?php echo $this->Html->link(__('List Comments'), array('controller' => 'comments', 'action' => 'index')); ?> </li>
-			<li><?php echo $this->Html->link(__('New Comment'), array('controller' => 'comments', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('投稿者更新'), array('action' => 'edit', $user['User']['id'])); ?> </li>
+			<li><?php echo $this->Form->postLink(__('投稿者削除'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
+			<li><?php echo $this->Html->link(__('投稿者一覧'), array('action' => 'index')); ?> </li>
+			<li><?php echo $this->Html->link(__('新規投稿者作成'), array('action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('コメント一覧'), array('controller' => 'comments', 'action' => 'index')); ?> </li>
+			<li><?php echo $this->Html->link(__('新規コメント作成'), array('controller' => 'comments', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 <h2><?php echo __('User'); ?></h2>
@@ -15,16 +15,6 @@
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['modified']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('User Name'); ?></dt>
@@ -41,11 +31,10 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Text'); ?></th>
+		<th><?php echo __('更新日時'); ?></th>
+		<th><?php echo __('作成日時'); ?></th>
+		<th><?php echo __('コメント内容'); ?></th>
 		<th><?php echo __('Title Id'); ?></th>
-		<th><?php echo __('User Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($user['Comment'] as $comment): ?>
@@ -55,20 +44,14 @@
 			<td><?php echo $comment['created']; ?></td>
 			<td><?php echo $comment['text']; ?></td>
 			<td><?php echo $comment['title_id']; ?></td>
-			<td><?php echo $comment['user_id']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'comments', 'action' => 'view', $comment['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'comments', 'action' => 'edit', $comment['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'comments', 'action' => 'delete', $comment['id']), array(), __('Are you sure you want to delete # %s?', $comment['id'])); ?>
+				<?php echo $this->Html->link(__('閲覧'), array('controller' => 'comments', 'action' => 'view', $comment['id'])); ?>
+				<?php echo $this->Html->link(__('更新'), array('controller' => 'comments', 'action' => 'edit', $comment['id'])); ?>
+				<?php echo $this->Form->postLink(__('削除'), array('controller' => 'comments', 'action' => 'delete', $comment['id']), array(), __('Are you sure you want to delete # %s?', $comment['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Comment'), array('controller' => 'comments', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>
