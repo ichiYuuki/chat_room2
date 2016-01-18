@@ -13,7 +13,7 @@ class User extends AppModel {
  * @var string
  */
 	public $displayField = 'user_name';
-
+	public $recursive = 3;
 /**
  * Validation rules
  *

@@ -13,7 +13,7 @@ class Title extends AppModel {
  * @var string
  */
 	public $displayField = 'titel_name';
-
+	public $recursive = 3;
 /**
  * Validation rules
  *

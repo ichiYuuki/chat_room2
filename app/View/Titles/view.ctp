@@ -45,18 +45,20 @@
 	<tr>
 		<th><?php echo __(''); ?></th>
 		<th><?php echo __('投稿内容'); ?></th>
+		<th><?php echo __('投稿者'); ?></th>
 		<th><?php echo __('更新日時'); ?></th>
 		<th><?php echo __('投稿日時'); ?></th>
-		<th><?php echo __('投稿者'); ?></th>
+
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($title['Comment'] as $comment): ?>
 		<tr>
 			<td><?php echo '' ?></td>
 			<td><?php echo $comment['text']; ?></td>
+			<td><?php echo $comment['User']['user_name']; ?></td>
 			<td><?php echo $comment['modified']; ?></td>
 			<td><?php echo $comment['created']; ?></td>
-			<td><?php echo $comment['user_id']; ?></td>
+
 			<td class="actions">
 				<?php echo $this->Html->link(__('閲覧'), array('controller' => 'comments', 'action' => 'view', $comment['id'])); ?>
 				<?php echo $this->Html->link(__('更新'), array('controller' => 'comments', 'action' => 'edit', $comment['id'])); ?>
