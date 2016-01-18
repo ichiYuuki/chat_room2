@@ -31,22 +31,21 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('コメント内容'); ?></th>
 		<th><?php echo __('更新日時'); ?></th>
 		<th><?php echo __('作成日時'); ?></th>
-		<th><?php echo __('コメント内容'); ?></th>
 		<th><?php echo __('Title Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($user['Comment'] as $comment): ?>
 		<tr>
 			<td><?php echo $comment['id']; ?></td>
+			<td><?php echo $comment['text']; ?></td>
 			<td><?php echo $comment['modified']; ?></td>
 			<td><?php echo $comment['created']; ?></td>
-			<td><?php echo $comment['text']; ?></td>
 			<td><?php echo $comment['title_id']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('閲覧'), array('controller' => 'comments', 'action' => 'view', $comment['id'])); ?>
-				<?php echo $this->Html->link(__('更新'), array('controller' => 'comments', 'action' => 'edit', $comment['id'])); ?>
+
 				<?php echo $this->Form->postLink(__('削除'), array('controller' => 'comments', 'action' => 'delete', $comment['id']), array(), __('Are you sure you want to delete # %s?', $comment['id'])); ?>
 			</td>
 		</tr>

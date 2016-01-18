@@ -8,28 +8,29 @@
 			<li><?php echo $this->Html->link(__('新規コメント作成'), array('controller' => 'comments', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-<h2><?php echo __('Title'); ?></h2>
+<h2><?php echo __('タイトル詳細'); ?></h2>
 	<dl>
+		<dt><?php echo __('タイトル'); ?></dt>
+		<dd>
+			<?php echo h($title['Title']['titel_name']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
 			<?php echo h($title['Title']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('更新日時'); ?></dt>
 		<dd>
 			<?php echo h($title['Title']['modified']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		<dt><?php echo __('作成日時'); ?></dt>
 		<dd>
 			<?php echo h($title['Title']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Titel Name'); ?></dt>
-		<dd>
-			<?php echo h($title['Title']['titel_name']); ?>
-			&nbsp;
-		</dd>
+
 	</dl>
 </div>
 
@@ -43,18 +44,18 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __(''); ?></th>
+		<th><?php echo __('投稿内容'); ?></th>
 		<th><?php echo __('更新日時'); ?></th>
 		<th><?php echo __('投稿日時'); ?></th>
-		<th><?php echo __('投稿内容'); ?></th>
-		<th><?php echo __('User Id'); ?></th>
+		<th><?php echo __('投稿者'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($title['Comment'] as $comment): ?>
 		<tr>
 			<td><?php echo '' ?></td>
+			<td><?php echo $comment['text']; ?></td>
 			<td><?php echo $comment['modified']; ?></td>
 			<td><?php echo $comment['created']; ?></td>
-			<td><?php echo $comment['text']; ?></td>
 			<td><?php echo $comment['user_id']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('閲覧'), array('controller' => 'comments', 'action' => 'view', $comment['id'])); ?>

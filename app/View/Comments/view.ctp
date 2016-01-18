@@ -13,7 +13,7 @@
 		</ul>
 	</div>
 
-	<h2><?php echo __('コメント詳細'); ?></h2>
+	<h2><?php echo __('詳細'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>

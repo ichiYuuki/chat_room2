@@ -37,8 +37,6 @@
 		<td><?php echo h($comment['Comment']['modified']); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['created']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('閲覧'), array('action' => 'view', $comment['Comment']['id'])); ?>
-			<?php echo $this->Html->link(__('更新'), array('action' => 'edit', $comment['Comment']['id'])); ?>
 			<?php echo $this->Form->postLink(__('削除'), array('action' => 'delete', $comment['Comment']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $comment['Comment']['id']))); ?>
 		</td>
 
