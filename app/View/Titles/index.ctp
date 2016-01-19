@@ -28,8 +28,8 @@
 		<td><?php echo h($title['Title']['created']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('閲覧'), array('action' => 'view', $title['Title']['id'])); ?>
-			<?php echo $this->Html->link(__('更新'), array('action' => 'edit', $title['Title']['id'])); ?>
-			<?php echo $this->Form->postLink(__('削除'), array('action' => 'delete', $title['Title']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $title['Title']['id']))); ?>
+			<?php //echo $this->Html->link(__('更新'), array('action' => 'edit', $title['Title']['id'])); ?>
+			<?php //echo $this->Form->postLink(__('削除'), array('action' => 'delete', $title['Title']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $title['Title']['id']))); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
